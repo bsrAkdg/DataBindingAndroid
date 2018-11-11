@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DataBindingObservableFieldApp</string>
+    <string name="noUsername">No username</string>
+    <string name="noJob">No Job</string>
+    <string name="noEmail">No email</string>
+    <string name="Engineer">Engineer</string>
+    <string name="Developer">Engineer and Developer</string>
+</resources>
