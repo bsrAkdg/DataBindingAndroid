@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="listener"
+            type="androidworks.bsrakdg.com.databindingthirthapp.UIEventListener"/>
+
+        <variable
+            name="user"
+            type="androidworks.bsrakdg.com.databindingthirthapp.model.User"/>
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/unit32"
+        android:layout_height="match_parent"
+        android:gravity="top|center"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="@string/userProfileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.username}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.email}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.address}"/>
+
+        <!-- Hoşgeldin Username -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HOŞGELDİN"
+            android:onClick="@{(v) -> listener.welcomeUserClick(v, user)}"/>
+
+        <!-- İşlem başarılı -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KULLANICIYI KAYDET"
+            android:onClick="@{listener::saveUserClick}"/>
+
+    </LinearLayout>
+</layout>

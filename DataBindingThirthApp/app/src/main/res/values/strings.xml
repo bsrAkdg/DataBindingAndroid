@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DataBindingThirthApp</string>
+    <string name="defaultUsername">Username</string>
+    <string name="userProfileTitle">User Profile</string>
+    <string name="showProfile">Show Profile</string>
+    <string name="welcome">Welcome !</string>
+</resources>

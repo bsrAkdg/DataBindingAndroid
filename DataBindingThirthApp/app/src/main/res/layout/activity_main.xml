@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="listener"
+            type="androidworks.bsrakdg.com.databindingthirthapp.UIEventListener"/>
+
+        <variable
+            name="user"
+            type="androidworks.bsrakdg.com.databindingthirthapp.model.User"/>
+    </data>
+
+    <LinearLayout
+        android:layout_margin="@dimen/unit32"
+        android:orientation="vertical"
+        android:gravity="top|center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="@string/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="@{user.username, default = @string/defaultUsername}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <include
+            layout="@layout/user_layout"
+            bind:user="@{user}"
+            bind:listener="@{listener}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</layout>
