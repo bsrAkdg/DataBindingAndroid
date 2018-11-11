@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DataBindingObservableApp</string>
+    <string name="noUsername">No username</string>
+    <string name="noEmail">No email</string>
+</resources>
