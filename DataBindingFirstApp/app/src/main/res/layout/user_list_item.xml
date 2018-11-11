@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data class = "UserListItemBinding">
+        <variable
+            name="user"
+            type="com.example.bakdag.databindingfirstapp.customModel.User"/>
+
+        <variable
+            name="phoneHandler"
+            type="com.example.bakdag.databindingfirstapp.PhoneImgClickHandler"/>
+
+    </data>
+
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="10dp">
+
+        <ImageView
+            app:setGenderImg="@{user.gender}"
+            android:layout_centerVertical="true"
+            android:id="@+id/genderImg"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="@{user.username}"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/genderImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:onClick="@{(v) -> phoneHandler.callPhone(user)}"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:elevation="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/phone"
+            android:adjustViewBounds="true" />
+
+    </RelativeLayout>
+</layout>
