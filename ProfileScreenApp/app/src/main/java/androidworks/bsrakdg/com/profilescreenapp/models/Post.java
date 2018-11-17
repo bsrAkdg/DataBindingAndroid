@@ -17,7 +17,7 @@ public class Post {
         this.imageUrl = imageUrl;
     }
 
-    @BindingAdapter("imageUrl")
+    @BindingAdapter("loadImageUrl")
     public static void loadImage(ImageView imageView, String imageUrl){
         Glide.with(imageView.getContext())
                 .load(imageUrl)
